@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "DodoRounded v2";
+        src: url("../assets/fonts/DodoRounded_v2-Regular.woff2") format("woff2");
+        font-display: swap;
+        font-style: normal;
+    }
+}
+
+html {
+    @apply font-regular;
+}
+
