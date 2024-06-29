@@ -40,21 +40,21 @@ yarn install
 
 ## Команды проекта
 
-| Command                | Action                                               |
-|:-----------------------|:-----------------------------------------------------|
-| `yarn dev`             | Запустить локальный dev сервер на `localhost:4321`   |
-| `yarn build`           | Сборка проекта в директорию `./dist/`                |
-| `yarn preview`         | Превью версия сборки                                 |
-| `yarn astro ...`       | Запуск команды на примере `astro add`, `astro check` |
-| `yarn astro -- --help` | Дополнительная информация                            |
+| Command                | Action                                                         |
+|:-----------------------|:---------------------------------------------------------------|
+| `yarn dev`             | Запустить локальный dev сервер (по-умолчанию `localhost:4321`) |
+| `yarn build`           | Сборка проекта в директорию `./dist/`                          |
+| `yarn preview`         | Превью билд версии                                             |
+| `yarn astro ...`       | Запуск команды на примере `astro add`, `astro check`           |
+| `yarn astro -- --help` | Дополнительная информация                                      |
 
 
 ## Структура проекта
 
 ```
-├── public/
-│   └── assets/            # Статические файлы (изображения, иконки и т.д.)
+├── public/...
 ├── src/
+│   ├── assets/            # Статические файлы (изображения, иконки и т.д.)
 │   ├── components/        # React и Astro компоненты
 │   ├── layouts/           # Базовый шаблон страниц
 │   └── pages/             # Страницы
@@ -98,7 +98,11 @@ Tailwind CSS предоставляет огромные возможности 
 3. **Стили позиционирования**: Стили для абсолютного позиционирования с использованием.
 4. **Псевдоклассы**: Последними добавляйте стили для псевдоклассов, таких как `:hover`, `:focus`, `:active` и т.д.
 
-### Способ 1.1
+### Способ 1 (рекомендуемый)
+C использованием scss модулей.
+Для типизации модулей используется библиотека [typescript-plugin-css-modules](https://www.npmjs.com/package/typescript-plugin-css-modules).
+
+### Способ 2.1 (маргинальный)
 С написанием стилей в компонентах.
 
 ### Пример использования:
@@ -118,7 +122,7 @@ Tailwind CSS предоставляет огромные возможности 
 </button>
 ```
 
-### Способ 1.2
+### Способ 2.2
 С отдельным написанием стилей.
 
 ### Автоподстановка стилей в компоненте
@@ -164,35 +168,6 @@ const Card = () => {
 export default Card;
 ```
 
-### Способ 3
-
-С использованием [Linaria](https://linaria.dev/).
-
-```tsx
-import {css} from '@linaria/core';
-
-const GLOBAL_VARS = {
-    color_header: 'red',
-} as const;
-
-export default function CSRComponent() {
-    return (
-        <div>
-            <h1>
-                Hello! This is 
-                <strong
-                    class={css`
-                        color: ${GLOBAL_VARS.color_header};
-                    `}
-                >Anton</strong>
-            </h1>
-        </div>
-    );
-}
-```
-
-[Интеграция Astro и Linaria](https://github.com/callstack/linaria/blob/master/examples/astro-solid/pages/csr.tsx)
-
 ## Деплой
 По умолчанию деплой настроен на публикацию артефакта в GitHub Pages. 
 
@@ -209,7 +184,7 @@ export default defineConfig({
 [Подробнее о настройках](https://docs.astro.build/en/guides/deploy/github/).
 
 ## UI Kit
-Если TW - [Базовый UI Kit](https://www.figma.com/design/V1c5n13I5RCxgbb9jnbCi2/UI-Kit?m=auto&t=GsxSjs5QRBXR762o-6), который необходимо расширить.
+[Базовый UI Kit](https://www.figma.com/design/V1c5n13I5RCxgbb9jnbCi2/UI-Kit?m=auto&t=GsxSjs5QRBXR762o-6), который необходимо расширить.
 
 ## Мультиязычность
 ?

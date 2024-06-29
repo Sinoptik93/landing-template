@@ -23,10 +23,15 @@
             "~/assets/*": [
                 "assets/*"
             ]
-        }
+        },
+        "plugins": [
+            {
+                "name": "typescript-plugin-css-modules"
+            }
+        ]
     },
     "include": [
-        "src",
+        "src"
     ],
     "exclude": [
         "node_modules",

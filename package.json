@@ -1,7 +1,7 @@
 {
-    "name": "",
+    "name": "LANDING_PROJECT_NAME",
     "type": "module",
-    "version": "0.0.1",
+    "license": "UNLICENSED",
     "scripts": {
         "dev": "astro dev",
         "start": "astro dev",
@@ -9,23 +9,25 @@
         "preview": "astro preview",
         "astro": "astro"
     },
+    "packageManager": "yarn@4.3.1",
     "dependencies": {
-        "@astrojs/check": "^0.7.0",
-        "@astrojs/react": "^3.3.4",
-        "@astrojs/tailwind": "^5.1.0",
-        "@nanostores/react": "^0.7.2",
-        "@types/react": "^18.3.2",
-        "@types/react-dom": "^18.3.0",
-        "astro": "^4.8.6",
         "nanostores": "^0.10.3",
         "react": "^18.3.1",
-        "react-dom": "^18.3.1",
-        "tailwindcss": "^3.4.3",
-        "typescript": "^5.4.5"
+        "tailwindcss": "^3.4.4"
     },
     "devDependencies": {
-        "sass": "^1.77.2",
+        "@astrojs/check": "^0.7.0",
+        "@astrojs/react": "^3.6.0",
+        "@astrojs/tailwind": "^5.1.0",
+        "@nanostores/react": "^0.7.2",
+        "@types/react": "^18.3.3",
+        "@types/react-dom": "^18.3.0",
+        "astro": "^4.11.3",
+        "react-dom": "^18.3.1",
+        "sass": "^1.77.6",
         "tailwind-merge": "^2.3.0",
+        "typescript": "^5.5.2",
+        "typescript-plugin-css-modules": "^5.1.0",
         "vite-plugin-svgr": "^4.2.0"
     }
 }
