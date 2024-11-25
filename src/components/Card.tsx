@@ -1,18 +1,18 @@
-import { twMerge } from 'tailwind-merge';
+import { twMerge } from "tailwind-merge";
 
 const Card = () => {
-    const baseStyles = 'p-4 bg-white rounded-lg shadow-md';
-    const mobileStyles = 'p-6';
-    const tabletStyles = 'md:p-8';
-    const desktopStyles = 'lg:p-10';
-    const hoverStyles = 'hover:bg-gray-100';
+    const baseStyles = "p-4 bg-white rounded-lg shadow-md";
+    const mobileStyles = "p-6";
+    const tabletStyles = "md:p-8";
+    const desktopStyles = "lg:p-10";
+    const hoverStyles = "hover:bg-gray-100";
 
     const cardClasses = twMerge(
         baseStyles,
         mobileStyles,
         tabletStyles,
         desktopStyles,
-        hoverStyles
+        hoverStyles,
     );
 
     return (

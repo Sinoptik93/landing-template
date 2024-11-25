@@ -1,12 +1,11 @@
 {
-    "extends": "astro/tsconfigs/strict",
+    "extends": "astro/tsconfigs/base",
     "compilerOptions": {
         "jsx": "react-jsx",
         "jsxImportSource": "react",
         "verbatimModuleSyntax": false,
         "noUnusedParameters": false,
         "resolveJsonModule": true,
-        "moduleResolution": "Node",
         "allowJs": true,
         "allowSyntheticDefaultImports": true,
         "baseUrl": "./src",
@@ -23,16 +22,8 @@
             "~/assets/*": [
                 "assets/*"
             ]
-        },
-        "plugins": [
-            {
-                "name": "typescript-plugin-css-modules"
-            }
-        ]
+        }
     },
-    "include": [
-        "src"
-    ],
     "exclude": [
         "node_modules",
         "dist"

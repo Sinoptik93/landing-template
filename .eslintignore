@@ -1,2 +1,8 @@
 # dependencies
 node_modules
+.astro
+.idea
+.vscode
+.yarn
+yarn.lock
+dist
